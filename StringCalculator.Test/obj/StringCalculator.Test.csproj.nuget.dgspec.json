@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aargarcia\\source\\repos\\StringCalculator\\StringCalculator.Test\\StringCalculator.Test.csproj": {}
+    "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Test\\StringCalculator.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aargarcia\\source\\repos\\StringCalculator\\StringCalculator.Test\\StringCalculator.Test.csproj": {
+    "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Test\\StringCalculator.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aargarcia\\source\\repos\\StringCalculator\\StringCalculator.Test\\StringCalculator.Test.csproj",
+        "projectUniqueName": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Test\\StringCalculator.Test.csproj",
         "projectName": "StringCalculator.Test",
-        "projectPath": "C:\\Users\\aargarcia\\source\\repos\\StringCalculator\\StringCalculator.Test\\StringCalculator.Test.csproj",
-        "packagesPath": "C:\\Users\\aargarcia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aargarcia\\source\\repos\\StringCalculator\\StringCalculator.Test\\obj\\",
+        "projectPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Test\\StringCalculator.Test.csproj",
+        "packagesPath": "C:\\Users\\otperez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aargarcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\otperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
