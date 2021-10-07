@@ -15,12 +15,27 @@ namespace StringCalculator
             if (string.IsNullOrEmpty(input))
                 return 0;
             var transformedInput = Transform(input);
-            checkInputs(transformedInput);
-            return transformedInput.Sum();
+
+            return CheckInputs(transformedInput).Sum();
 
         }
 
-        private static void checkInputs(IEnumerable<int> transformedInput)
+        private static List<int> CheckInputs(IEnumerable<int> transformedInput)
+        {
+            List<int> inputList = transformedInput.ToList();
+            CheckBigInputs(inputList);
+            CheckNegativeInputs(inputList);
+
+            return inputList;
+        }
+
+        private static void CheckBigInputs(List<int> inputList)
+        {
+            inputList.RemoveAll((i => i > 1000));
+
+        }
+
+        private static void CheckNegativeInputs(List<int> transformedInput)
         {
             var negativeNumbers = "";
             foreach (var input in transformedInput)
@@ -37,6 +52,7 @@ namespace StringCalculator
                 throw new InvalidOperationException("negatives not allowed: " + negativeNumbers);
             }
         }
+
 
         private static string FormatMessage(string negativeNumbers)
         {
