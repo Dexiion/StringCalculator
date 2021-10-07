@@ -17,44 +17,24 @@ namespace StringCalculator.Test {
             result.Should().Be(0);
         }
 
-        [Test]
-        public void return_1_when_input_is_1()
+        [TestCase("2", 2)]
+        [TestCase("1", 1)]
+        public void return_a_number_when_input_is_that_number(string input, int expected)
         {
-            var input = "1";
 
             var result = StringCalculator.Add(input);
 
-            result.Should().Be(1);
+            result.Should().Be(expected);
         }
 
-        [Test]
-        public void return_a_number_when_input_is_that_number()
+        [TestCase("2,1", 3)]
+        [TestCase("4,2", 6)]
+        public void return_addition_when_input_is_two_numbers(string input, int expected)
         {
-            var input = "2";
 
             var result = StringCalculator.Add(input);
 
-            result.Should().Be(2);
-        }
-
-        [Test]
-        public void return_3_when_input_is_1_and_2()
-        {
-            var input = "1,2";
-
-            var result = StringCalculator.Add(input);
-
-            result.Should().Be(3);
-        }
-
-        [Test]
-        public void return_addition_when_input_is_two_numbers()
-        {
-            var input = "4,2";
-
-            var result = StringCalculator.Add(input);
-
-            result.Should().Be(6);
+            result.Should().Be(expected);
         }
 
         [Test]

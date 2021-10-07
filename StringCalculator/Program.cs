@@ -14,37 +14,31 @@ namespace StringCalculator
         {
             if (string.IsNullOrEmpty(input))
                 return 0;
-            var transformedInput = Transform(input);
+            var numbers = Transform(input);
 
-            return CheckInputs(transformedInput).Sum();
-
-        }
-
-        private static IEnumerable<int> CheckInputs(IEnumerable<int> transformedInput)
-        {
-            List<int> inputList = transformedInput.ToList();
-            CheckBigInputs(inputList);
-            CheckNegativeInputs(inputList);
-
-            return inputList;
-        }
-
-        private static void CheckBigInputs(List<int> inputList)
-        {
-            inputList.RemoveAll((i => i > 1000));
+            return CheckValidNumbers(numbers).Sum();
 
         }
 
-        private static void CheckNegativeInputs(List<int> input)
+        private static IEnumerable<int> CheckValidNumbers(IEnumerable<int> numbers)
         {
-            var negativeNumbers = input.Where(i => i < 0);
+            
+            CheckNegativeNumbers(numbers);
+            return CheckBigNumbers(numbers);
+
+        }
+
+        private static IEnumerable<int> CheckBigNumbers(IEnumerable<int> inputList)
+        {
+            return inputList.Where((number => number <= 1000));
+
+        }
+
+        private static void CheckNegativeNumbers(IEnumerable<int> input)
+        {
+            var negativeNumbers = input.Where(number => number < 0);
             if (negativeNumbers.Any())
-                throw new InvalidOperationException("negatives not allowed: " + string.Join(",", negativeNumbers.ToArray()));
-        }
-
-        private static string FormatMessage(string negativeNumbers)
-        {
-            return negativeNumbers.Substring(0, negativeNumbers.Length - 1);
+                throw new InvalidOperationException("negatives not allowed: " + string.Join(",", negativeNumbers));
         }
 
         private static IEnumerable<int> Transform(string input)
