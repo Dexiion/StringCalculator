@@ -95,7 +95,6 @@ namespace StringCalculator.Test {
             Action act = () => StringCalculator.Add(input);
 
             act.Should().Throw<InvalidOperationException>()
-                .WithInnerException<ArgumentException>()
                 .WithMessage("negatives not allowed: -1");
         }
     }
