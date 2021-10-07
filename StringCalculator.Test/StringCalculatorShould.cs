@@ -1,3 +1,4 @@
+using System;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -84,6 +85,14 @@ namespace StringCalculator.Test {
             var result = StringCalculator.Add(input);
 
             result.Should().Be(3);
+        }
+        
+        [Test]
+        public void throw_exception_when_input_has_negative_number()
+        {
+            var input = "1,4,-1";
+
+            Action act = () => StringCalculator.Add(input);
         }
     }
 }

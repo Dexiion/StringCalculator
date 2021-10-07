@@ -14,23 +14,24 @@ namespace StringCalculator
         {
             if (string.IsNullOrEmpty(input))
                 return 0;
-            if (input.Contains(DELIMITER_SELECTOR))
-                input = ReplaceDelimiter(input);
             return Transform(input).Sum();
 
         }
 
         private static IEnumerable<int> Transform(string input)
         {
-            input = input.Replace(SEPARATOR_NEW_LINE, SEPARATOR_COMMA);
-            return input.Split(SEPARATOR_COMMA).Select(int.Parse);
-        }
+            if (input.Contains(DELIMITER_SELECTOR))
+            {
+                var newDelimiter = input[2];
+                input = input.Substring(4);
+                input = input.Replace(newDelimiter, SEPARATOR_COMMA);
+            }
+            else
+            {
+                input = input.Replace(SEPARATOR_NEW_LINE, SEPARATOR_COMMA);
+            }
 
-        private static string ReplaceDelimiter(string input)
-        {
-            var newDelimiter = input[2];
-            input = input.Substring(4);
-            return input.Replace(newDelimiter, SEPARATOR_COMMA);
+            return input.Split(SEPARATOR_COMMA).Select(int.Parse);
         }
 
     }
