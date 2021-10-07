@@ -33,6 +33,5 @@ namespace StringCalculator
 
             return input.Split(SEPARATOR_COMMA).Select(int.Parse);
         }
-
     }
 }
