@@ -22,7 +22,7 @@ namespace StringCalculator
 
         private static IEnumerable<int> CheckInputs(IEnumerable<int> transformedInput)
         {
-            var inputList = transformedInput.ToList();
+            List<int> inputList = transformedInput.ToList();
             CheckBigInputs(inputList);
             CheckNegativeInputs(inputList);
 
@@ -35,24 +35,12 @@ namespace StringCalculator
 
         }
 
-        private static void CheckNegativeInputs(List<int> transformedInput)
+        private static void CheckNegativeInputs(List<int> input)
         {
-            var negativeNumbers = "";
-            foreach (var input in transformedInput)
-            {
-                if (input < 0)
-                {
-                    negativeNumbers += input + ",";
-                }
-            }
-
-            if (!negativeNumbers.Equals(""))
-            {
-                negativeNumbers = FormatMessage(negativeNumbers);
-                throw new InvalidOperationException("negatives not allowed: " + negativeNumbers);
-            }
+            var negativeNumbers = input.Where(i => i < 0);
+            if (negativeNumbers.Any())
+                throw new InvalidOperationException("negatives not allowed: " + string.Join(",", negativeNumbers.ToArray()));
         }
-
 
         private static string FormatMessage(string negativeNumbers)
         {
