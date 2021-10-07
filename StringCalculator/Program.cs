@@ -9,20 +9,17 @@ namespace StringCalculator {
         public static int Add(string input)
         {
             if (string.IsNullOrEmpty(input)) return 0;
-            if(input.Contains(SEPARATOR_COMA) || input.Contains(SEPARATOR_NEW_LINE))
-            {
-                var transformedInput = Transform(input);
+            if (!input.Contains(SEPARATOR_COMA) && !input.Contains(SEPARATOR_NEW_LINE)) return int.Parse(input);
+            var transformedInput = Transform(input);
 
-                return transformedInput.Sum();
-            }
-            
-            return int.Parse(input);
+            return transformedInput.Sum();
+
         }
 
         private static IEnumerable<int> Transform(string input)
         {
-            var replace = input.Replace(SEPARATOR_NEW_LINE, SEPARATOR_COMA);
-            return replace.Split(SEPARATOR_COMA).Select(int.Parse);
+            input = input.Replace(SEPARATOR_NEW_LINE, SEPARATOR_COMA);
+            return input.Split(SEPARATOR_COMA).Select(int.Parse);
         }
     }
 }
