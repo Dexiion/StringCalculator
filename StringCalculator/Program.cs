@@ -20,9 +20,9 @@ namespace StringCalculator
 
         }
 
-        private static List<int> CheckInputs(IEnumerable<int> transformedInput)
+        private static IEnumerable<int> CheckInputs(IEnumerable<int> transformedInput)
         {
-            List<int> inputList = transformedInput.ToList();
+            var inputList = transformedInput.ToList();
             CheckBigInputs(inputList);
             CheckNegativeInputs(inputList);
 
