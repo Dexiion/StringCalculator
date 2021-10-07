@@ -10,10 +10,7 @@ namespace StringCalculator {
         {
             if (string.IsNullOrEmpty(input)) return 0;
             if (!input.Contains(SEPARATOR_COMA) && !input.Contains(SEPARATOR_NEW_LINE)) return int.Parse(input);
-            var transformedInput = Transform(input);
-
-            return transformedInput.Sum();
-
+            return Transform(input).Sum();
         }
 
         private static IEnumerable<int> Transform(string input)
