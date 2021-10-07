@@ -75,5 +75,15 @@ namespace StringCalculator.Test {
 
             result.Should().Be(7);
         }
+
+        [Test]
+        public void return_addition_when_separator_is_defined_by_input()
+        {
+            var input = "//;\n1;2";
+
+            var result = StringCalculator.Add(input);
+
+            result.Should().Be(3);
+        }
     }
 }
