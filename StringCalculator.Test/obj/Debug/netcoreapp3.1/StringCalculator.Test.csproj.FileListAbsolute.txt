@@ -104,3 +104,9 @@ C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.pdb
+C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\NSubstitute.dll
+C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.Application.dll
+C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.Application.pdb
+C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.Infraestructure.dll
+C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.Infraestructure.pdb

@@ -1,0 +1,246 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Console\\StringCalculator.Console.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Application\\StringCalculator.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Application\\StringCalculator.Application.csproj",
+        "projectName": "StringCalculator.Application",
+        "projectPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Application\\StringCalculator.Application.csproj",
+        "packagesPath": "C:\\Users\\otperez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\otperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/aidacanarias/auth/91440d25-96ec-4958-861c-c4cac6f1192c/api/v2": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator\\StringCalculator.csproj": {
+                "projectPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator\\StringCalculator.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Console\\StringCalculator.Console.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Console\\StringCalculator.Console.csproj",
+        "projectName": "StringCalculator.Console",
+        "projectPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Console\\StringCalculator.Console.csproj",
+        "packagesPath": "C:\\Users\\otperez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Console\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\otperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/aidacanarias/auth/91440d25-96ec-4958-861c-c4cac6f1192c/api/v2": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Application\\StringCalculator.Application.csproj": {
+                "projectPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Application\\StringCalculator.Application.csproj"
+              },
+              "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Infraestructure\\StringCalculator.Infraestructure.csproj": {
+                "projectPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Infraestructure\\StringCalculator.Infraestructure.csproj"
+              },
+              "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator\\StringCalculator.csproj": {
+                "projectPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator\\StringCalculator.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Infraestructure\\StringCalculator.Infraestructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Infraestructure\\StringCalculator.Infraestructure.csproj",
+        "projectName": "StringCalculator.Infraestructure",
+        "projectPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Infraestructure\\StringCalculator.Infraestructure.csproj",
+        "packagesPath": "C:\\Users\\otperez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Infraestructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\otperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/aidacanarias/auth/91440d25-96ec-4958-861c-c4cac6f1192c/api/v2": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Application\\StringCalculator.Application.csproj": {
+                "projectPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator.Application\\StringCalculator.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator\\StringCalculator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator\\StringCalculator.csproj",
+        "projectName": "StringCalculator",
+        "projectPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator\\StringCalculator.csproj",
+        "packagesPath": "C:\\Users\\otperez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\otperez\\Desktop\\Repos\\StringCalculator\\StringCalculator\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\otperez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/aidacanarias/auth/91440d25-96ec-4958-861c-c4cac6f1192c/api/v2": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
