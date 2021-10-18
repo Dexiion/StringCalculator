@@ -11,9 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringCalculator.Applicatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringCalculator.Infraestructure", "StringCalculator.Infraestructure\StringCalculator.Infraestructure.csproj", "{3287F773-457B-44F8-8E80-5C91E96EEA53}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringCalculator.Console", "StringCalculator.Console\StringCalculator.Console.csproj", "{B59766D7-2AD0-4450-97B9-50AE98BC5E6B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCalculator.Api", "StringCalculator.Api\StringCalculator.Api.csproj", "{DEAEEABF-054A-475E-AA56-FA5AA5503730}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringCalculator.Api", "StringCalculator.Api\StringCalculator.Api.csproj", "{DEAEEABF-054A-475E-AA56-FA5AA5503730}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +35,6 @@ Global
 		{3287F773-457B-44F8-8E80-5C91E96EEA53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3287F773-457B-44F8-8E80-5C91E96EEA53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3287F773-457B-44F8-8E80-5C91E96EEA53}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B59766D7-2AD0-4450-97B9-50AE98BC5E6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B59766D7-2AD0-4450-97B9-50AE98BC5E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B59766D7-2AD0-4450-97B9-50AE98BC5E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B59766D7-2AD0-4450-97B9-50AE98BC5E6B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DEAEEABF-054A-475E-AA56-FA5AA5503730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DEAEEABF-054A-475E-AA56-FA5AA5503730}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEAEEABF-054A-475E-AA56-FA5AA5503730}.Release|Any CPU.ActiveCfg = Release|Any CPU

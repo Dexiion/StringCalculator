@@ -8,9 +8,7 @@ namespace StringCalculator.Application
     {
         static void Main(string[] args)
         {
-            var printReader = new CSharpIcSharpConsole();
-            var stringCalculator = new GetStringCalculator(printReader, new CSharpLog("./log.txt"));
-            printReader.Write("Introduzca los valores: ");
+            var stringCalculator = new GetStringCalculator(new CSharpLog("./log.txt"));
             stringCalculator.Execute(parseInput(printReader.Read()));
         }
 

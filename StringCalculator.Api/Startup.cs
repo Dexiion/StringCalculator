@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using StringCalculator.Application;
+using StringCalculator.Application.Actions;
+using StringCalculator.Infraestructure;
+using Microsoft.OpenApi.Models;
 
 namespace StringCalculator.Api
 {
@@ -22,7 +22,25 @@ namespace StringCalculator.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddControllers();
+            services.AddSingleton<GetStringCalculator>();
+            services.AddSingleton<ICSharpLogger, CSharpLog>(_ => new CSharpLog("./log.txt"));
+            AddSwagger(services);
+        }
+
+        private void AddSwagger(IServiceCollection services)
+        {
+            services.AddSwaggerGen(options =>
+            {
+                var groupName = "v1";
+
+                options.SwaggerDoc(groupName, new OpenApiInfo
+                {
+                    Title = $"String Calculator {groupName}",
+                    Version = groupName,
+                    Description = "String Calculator API"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,15 +55,17 @@ namespace StringCalculator.Api
                 app.UseExceptionHandler("/Error");
             }
 
-            app.UseStaticFiles();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "String Calculator API V1");
+            });
 
             app.UseRouting();
 
-            app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }
