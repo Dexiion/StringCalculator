@@ -9,9 +9,11 @@ using StringCalculator.Application.Actions;
 
 namespace StringCalculator.Api.Controllers
 {
-    [Route("api/StringCalculator")]
+    [ApiVersion("2")]
+    [Route("api/v{version:apiVersion}/StringCalculator")]
     [ApiController]
     [Produces("application/json")]
+
     public class StringCalculator : ControllerBase
     {
         private readonly GetStringCalculator stringCalculator;
@@ -26,8 +28,12 @@ namespace StringCalculator.Api.Controllers
         {
             try
             {
-                var parsedInput = input.Replace("\\n", "\n");
-                return Ok(stringCalculator.Execute(parsedInput));
+                var parsedInput = "";
+                if (input != null)
+                {
+                    parsedInput = input.Replace("\\n", "\n");
+                }
+                return Ok(stringCalculator.ExecuteWithNegatives(parsedInput));
             }
             catch (InvalidOperationException e)
             {

@@ -10,4 +10,3 @@ C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Application\obj
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Application\obj\Debug\netcoreapp3.1\StringCalculator.Application.csproj.CoreCompileInputs.cache
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Application\obj\Debug\netcoreapp3.1\StringCalculator.Application.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Application\obj\Debug\netcoreapp3.1\StringCalculator.Application.pdb
-C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Application\obj\Debug\netcoreapp3.1\StringCalculator.Application.csproj.CopyComplete

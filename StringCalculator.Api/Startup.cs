@@ -1,20 +1,26 @@
-using System.ComponentModel.Design.Serialization;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using StringCalculator.Application;
 using StringCalculator.Application.Actions;
 using StringCalculator.Infraestructure;
 using Microsoft.OpenApi.Models;
 using StringCalculator.Api.HealthChecks;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace StringCalculator.Api
 {
     public class Startup
     {
-        private const string logFilePath = "../logs/log.txt";
+        private const string logFolderPath = "../logs/";
+        private const string logFilePath = logFolderPath + "log.txt";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,29 +33,23 @@ namespace StringCalculator.Api
         {
             services.AddControllers();
             services.AddSingleton<GetStringCalculator>();
-            services.AddHealthChecks().AddTypeActivatedCheck<LoggerHealthCheck>
-                ("Log file health check", args: logFilePath);
+            services.AddHealthChecks().AddFileSystemHealthCheck(logFolderPath);
             services.AddSingleton<ICSharpLogger, CSharpLog>(_ => new CSharpLog(logFilePath));
-            AddSwagger(services);
-        }
-
-        private void AddSwagger(IServiceCollection services)
-        {
-            services.AddSwaggerGen(options =>
+            services.AddApiVersioning(options =>
             {
-                var groupName = "v1";
-
-                options.SwaggerDoc(groupName, new OpenApiInfo
-                {
-                    Title = $"String Calculator {groupName}",
-                    Version = groupName,
-                    Description = "String Calculator API"
-                });
+                options.ReportApiVersions = true;
             });
+            services.AddVersionedApiExplorer(options =>
+            {
+                options.GroupNameFormat = "'v'VVV";
+                options.SubstituteApiVersionInUrl = true;
+            });
+            services.AddSwaggerGen();
+            services.ConfigureOptions<ConfigureSwaggerOptions>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
             if (env.IsDevelopment())
             {
@@ -60,19 +60,79 @@ namespace StringCalculator.Api
                 app.UseExceptionHandler("/Error");
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "String Calculator API V1");
-            });
+            app.UseSwagger()
+                .UseSwaggerUI(options =>
+                {
+                    foreach (var description in provider.ApiVersionDescriptions)
+                    {
+                        options.SwaggerEndpoint(
+                            $"/swagger/{description.GroupName}/swagger.json",
+                            description.GroupName.ToUpperInvariant());
+                    }
+                })
+                .UseRouting()
+                .UseEndpoints(endpoints =>
+                {
+                    endpoints.MapControllers();
+                    
+                })
+                .UseHealthChecks("/status.json", new HealthCheckOptions
+                    { Predicate = _ => true, ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse});
 
-            app.UseRouting();
+        }
+    }
 
-            app.UseEndpoints(endpoints =>
+    public class ConfigureSwaggerOptions
+        : IConfigureNamedOptions<SwaggerGenOptions>
+    {
+        private readonly IApiVersionDescriptionProvider provider;
+
+        public ConfigureSwaggerOptions(
+            IApiVersionDescriptionProvider provider)
+        {
+            this.provider = provider;
+        }
+
+        public void Configure(SwaggerGenOptions options)
+        {
+            foreach (var description in provider.ApiVersionDescriptions)
             {
-                endpoints.MapControllers();
-                endpoints.MapHealthChecks("api/HealthChecks");
-            });
+                options.SwaggerDoc(
+                    description.GroupName,
+                    CreateVersionInfo(description));
+            }
+        }
+
+        public void Configure(string name, SwaggerGenOptions options)
+        {
+            Configure(options);
+        }
+
+        private OpenApiInfo CreateVersionInfo(
+            ApiVersionDescription description)
+        {
+            var info = new OpenApiInfo()
+            {
+                Title = "Heroes API",
+                Version = description.ApiVersion.ToString()
+            };
+
+            if (description.IsDeprecated)
+            {
+                info.Description += " This API version has been deprecated.";
+            }
+
+            return info;
+        }
+    }
+
+
+    public static class ServicesExtensions
+    {
+        public static IHealthChecksBuilder AddFileSystemHealthCheck(this IHealthChecksBuilder builder, string logFolderPath)
+        {
+            return builder.Add(new HealthCheckRegistration("Log Folder Health Check",
+                _ => new LoggerHealthCheck(logFolderPath), null, null));
         }
     }
 }

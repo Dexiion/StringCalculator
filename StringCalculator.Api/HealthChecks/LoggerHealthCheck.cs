@@ -16,27 +16,22 @@ namespace StringCalculator.Api.HealthChecks
     [Produces("application/json")]
     public class LoggerHealthCheck : IHealthCheck
     {
-        private readonly string logFilePath;
+        private readonly string logFolderPath;
 
-        public LoggerHealthCheck(string logFilePath)
+        public LoggerHealthCheck(string logFolderPath)
         {
-            this.logFilePath = logFilePath;
+            this.logFolderPath = logFolderPath;
         }
         public Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = new CancellationToken())
         {
-            try
+            if (Directory.Exists(logFolderPath))
             {
-                var logFileStream = File.OpenWrite(logFilePath);
-                logFileStream.Close();
                 return Task.FromResult(
                     HealthCheckResult.Healthy("A healthy result."));
             }
-            catch (Exception e)
-            {
-                return Task.FromResult(
-                    new HealthCheckResult(context.Registration.FailureStatus,
-                        "An unhealthy result."));
-            }
+            return Task.FromResult(
+                new HealthCheckResult(context.Registration.FailureStatus,
+                    "An unhealthy result. Log Folder doesn't Exists"));
         }
     }
 }

@@ -17,7 +17,7 @@ namespace StringCalculator.Test
         {
             console = Substitute.For<ICSharpConsole>();
             logger = Substitute.For<ICSharpLogger>();
-            stringCalculator = new GetStringCalculator(console, logger);
+            stringCalculator = new GetStringCalculator(logger);
         }
 
         [TestCase("//;\n1;2", "El resultado es: 3")]

@@ -20,12 +20,19 @@ namespace StringCalculator
 
         }
 
+        public static int AddWithNegatives(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return 0;
+            var numbers = Transform(input);
+
+            return CheckBigNumbers(numbers).Sum();
+        }
+
         private static IEnumerable<int> CheckValidNumbers(IEnumerable<int> numbers)
         {
-            
             CheckNegativeNumbers(numbers);
             return CheckBigNumbers(numbers);
-
         }
 
         private static IEnumerable<int> CheckBigNumbers(IEnumerable<int> inputList)

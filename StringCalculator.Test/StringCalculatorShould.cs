@@ -87,5 +87,35 @@ namespace StringCalculator.Test {
 
             result.Should().Be(2);
         }
+
+        [Test]
+        public void should_add_with_negative_numbers()
+        {
+            var input = "2,-1";
+
+            var result = StringCalculator.AddWithNegatives(input);
+
+            result.Should().Be(1);
+        }
+
+        [Test]
+        public void should_add_with_negative_numbers_and_specified_delimiter()
+        {
+            var input = "//;\n2;-1";
+
+            var result = StringCalculator.AddWithNegatives(input);
+
+            result.Should().Be(1);
+        }
+
+        [Test]
+        public void should_add_with_negative_numbers_ignoring_numbers_bigger_than_1000()
+        {
+            var input = "1002,-1";
+
+            var result = StringCalculator.AddWithNegatives(input);
+
+            result.Should().Be(-1);
+        }
     }
 }
