@@ -26,7 +26,8 @@ namespace StringCalculator.Api.HealthChecks
         {
             try
             {
-                File.OpenWrite(logFilePath);
+                var logFileStream = File.OpenWrite(logFilePath);
+                logFileStream.Close();
                 return Task.FromResult(
                     HealthCheckResult.Healthy("A healthy result."));
             }
