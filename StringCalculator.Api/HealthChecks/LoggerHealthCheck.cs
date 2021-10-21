@@ -16,13 +16,17 @@ namespace StringCalculator.Api.HealthChecks
     [Produces("application/json")]
     public class LoggerHealthCheck : IHealthCheck
     {
+        private readonly string logFilePath;
+
+        public LoggerHealthCheck(string logFilePath)
+        {
+            this.logFilePath = logFilePath;
+        }
         public Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = new CancellationToken())
         {
-            const string logFile = "../logs/log.txt";
-
             try
             {
-                File.OpenWrite(logFile);
+                File.OpenWrite(logFilePath);
                 return Task.FromResult(
                     HealthCheckResult.Healthy("A healthy result."));
             }

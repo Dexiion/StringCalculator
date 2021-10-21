@@ -1,3 +1,4 @@
+using System.ComponentModel.Design.Serialization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -13,6 +14,7 @@ namespace StringCalculator.Api
 {
     public class Startup
     {
+        private const string logFilePath = "../logs/log.txt";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,8 +27,9 @@ namespace StringCalculator.Api
         {
             services.AddControllers();
             services.AddSingleton<GetStringCalculator>();
-            services.AddHealthChecks().AddCheck<LoggerHealthCheck>("Log file health check");
-            services.AddSingleton<ICSharpLogger, CSharpLog>(_ => new CSharpLog("../logs/log.txt"));
+            services.AddHealthChecks().AddTypeActivatedCheck<LoggerHealthCheck>
+                ("Log file health check", args: logFilePath);
+            services.AddSingleton<ICSharpLogger, CSharpLog>(_ => new CSharpLog(logFilePath));
             AddSwagger(services);
         }
 
