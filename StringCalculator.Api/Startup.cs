@@ -7,6 +7,7 @@ using StringCalculator.Application;
 using StringCalculator.Application.Actions;
 using StringCalculator.Infraestructure;
 using Microsoft.OpenApi.Models;
+using StringCalculator.Api.HealthChecks;
 
 namespace StringCalculator.Api
 {
@@ -24,7 +25,8 @@ namespace StringCalculator.Api
         {
             services.AddControllers();
             services.AddSingleton<GetStringCalculator>();
-            services.AddSingleton<ICSharpLogger, CSharpLog>(_ => new CSharpLog("./log.txt"));
+            services.AddHealthChecks().AddCheck<LoggerHealthCheck>("Log file health check");
+            services.AddSingleton<ICSharpLogger, CSharpLog>(_ => new CSharpLog("../logs/log.txt"));
             AddSwagger(services);
         }
 
@@ -66,6 +68,7 @@ namespace StringCalculator.Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("api/HealthChecks");
             });
         }
     }

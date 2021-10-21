@@ -26,7 +26,8 @@ namespace StringCalculator.Api.Controllers
         {
             try
             {
-                return Ok(stringCalculator.Execute(input));
+                var parsedInput = input.Replace("\\n", "\n");
+                return Ok(stringCalculator.Execute(parsedInput));
             }
             catch (InvalidOperationException e)
             {
