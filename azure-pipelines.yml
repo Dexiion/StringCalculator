@@ -49,15 +49,12 @@ steps:
     projects: 'StringCalculator.sln'
 
 - task: DotNetCoreCLI@2
-  displayName: ".NET Core Publish"
+  displayName: Zip Project
   inputs:
-    command: 'publish'
-    publishWebProjects: true
-    arguments : '--output $(Build.ArtifactStagingDirectory) --configuration Release --no-restore --no-build'
+    command: publish
+    publishWebProjects: false
+    projects: "StringCalculator.Api/StringCalculator.Api.csproj"
+    arguments: "-c Release -r win-x64 --self-contained --output $(build.artifactstagingdirectory)"
 
 - task: PublishBuildArtifacts@1
-  displayName: "Drop Artifact"
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+  displayName: Publish
