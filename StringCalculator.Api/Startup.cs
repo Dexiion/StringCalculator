@@ -113,7 +113,7 @@ namespace StringCalculator.Api
         {
             var info = new OpenApiInfo()
             {
-                Title = "Heroes API",
+                Title = "String Calculator API",
                 Version = description.ApiVersion.ToString()
             };
 

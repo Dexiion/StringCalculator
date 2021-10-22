@@ -32,7 +32,7 @@ namespace StringCalculator.Application.Actions
             }
         }
 
-        public string ExecuteWithNegatives(string input)
+        public string ExecuteV2(string input)
         {
             try
             {
@@ -40,12 +40,6 @@ namespace StringCalculator.Application.Actions
                 var log = ParseLog(input, result.ToString());
                 logPrinter.Write(log);
                 return result.ToString();
-            }
-            catch (InvalidOperationException e)
-            {
-                var log = ParseLog(input, e.Message);
-                logPrinter.Write(log);
-                throw e;
             }
             catch (Exception e)
             {

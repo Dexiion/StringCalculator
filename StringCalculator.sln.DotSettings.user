@@ -6,5 +6,6 @@
     &lt;TestId&gt;NUnit3x::8C73EDF9-20B7-481A-93E9-1C83AB87A809::.NETCoreApp,Version=v3.1::StringCalculator.Test.StringCalculatorShould.should_add_with_negative_numbers&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::8C73EDF9-20B7-481A-93E9-1C83AB87A809::.NETCoreApp,Version=v3.1::StringCalculator.Test.StringCalculatorShould.should_add_with_negative_numbers_ignoring_numbers_bigger_than_1000&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::8C73EDF9-20B7-481A-93E9-1C83AB87A809::.NETCoreApp,Version=v3.1::StringCalculator.Test.StringCalculatorShould.should_add_with_negative_numbers_and_specified_delimiter&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::8C73EDF9-20B7-481A-93E9-1C83AB87A809::.NETCoreApp,Version=v3.1::StringCalculator.Test.CSharpLogShould&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

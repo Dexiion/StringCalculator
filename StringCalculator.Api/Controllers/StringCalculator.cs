@@ -33,7 +33,7 @@ namespace StringCalculator.Api.Controllers
                 {
                     parsedInput = input.Replace("\\n", "\n");
                 }
-                return Ok(stringCalculator.ExecuteWithNegatives(parsedInput));
+                return Ok(stringCalculator.ExecuteV2(parsedInput));
             }
             catch (InvalidOperationException e)
             {

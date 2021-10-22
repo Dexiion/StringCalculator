@@ -12,4 +12,3 @@ C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Infraestructure
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Infraestructure\obj\Debug\netcoreapp3.1\StringCalculator.Infraestructure.csproj.CoreCompileInputs.cache
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Infraestructure\obj\Debug\netcoreapp3.1\StringCalculator.Infraestructure.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Infraestructure\obj\Debug\netcoreapp3.1\StringCalculator.Infraestructure.pdb
-C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Infraestructure\obj\Debug\netcoreapp3.1\StringCalculator.Infraestructure.csproj.CopyComplete
