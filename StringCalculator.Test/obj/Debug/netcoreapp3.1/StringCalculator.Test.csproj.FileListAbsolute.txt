@@ -12,7 +12,6 @@ C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.Test.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.Test.pdb
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
-C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CommunicationUtilities.dll
@@ -22,7 +21,6 @@ C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\nunit.framework.dll
-C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\de\Microsoft.TestPlatform.CoreUtilities.resources.dll
@@ -97,7 +95,6 @@ C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\obj\Debug\
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\obj\Debug\netcoreapp3.1\StringCalculator.Test.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\obj\Debug\netcoreapp3.1\StringCalculator.Test.pdb
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\obj\Debug\netcoreapp3.1\StringCalculator.Test.genruntimeconfig.cache
-C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\CoverletSourceRootsMapping
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\FluentAssertions.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
@@ -110,3 +107,4 @@ C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.Application.pdb
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.Infraestructure.dll
 C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\StringCalculator.Infraestructure.pdb
+C:\Users\otperez\Desktop\Repos\StringCalculator\StringCalculator.Test\bin\Debug\netcoreapp3.1\testcentric.engine.metadata.dll
