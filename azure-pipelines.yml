@@ -49,11 +49,13 @@ steps:
     projects: 'StringCalculator.sln'
 
 - task: DotNetCoreCLI@2
+  displayName: ".NET Core Publish"
   inputs:
     command: 'publish'
     publishWebProjects: true
 
 - task: PublishBuildArtifacts@1
+  displayName: "Drop Artifact"
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
