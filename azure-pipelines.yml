@@ -47,3 +47,8 @@ steps:
     command: 'test'
     arguments: "--configuration Release --no-restore --no-build"
     projects: 'StringCalculator.sln'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
