@@ -53,7 +53,7 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
-    workingDirectory: '**/*.csproj'
+    arguments : '--output $(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   displayName: "Drop Artifact"
