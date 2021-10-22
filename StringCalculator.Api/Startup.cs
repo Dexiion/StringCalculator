@@ -19,7 +19,7 @@ namespace StringCalculator.Api
 {
     public class Startup
     {
-        private const string logFolderPath = "../logs/";
+        private const string logFolderPath = "./logs/";
         private const string logFilePath = logFolderPath + "log.txt";
         public Startup(IConfiguration configuration)
         {
